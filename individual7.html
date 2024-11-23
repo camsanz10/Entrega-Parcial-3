@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <header>
+        <h1>Detalle del Producto</h1>
+        <a href="index.html" class="volver">← Volver a la tienda</a>
+    </header>
+
+    <main>
+        <section class="detalle-producto">
+            <div class="imagen-producto">
+                <img src="producto7.png" alt="Puntos Negros">
+            </div>
+            <div class="info-producto">
+                <h2>Puntos Negros</h2>
+                <p class="descripcion-detalle">
+                Este exfoliante químico previene la aparición de puntos negros, ilumina y consigue un tono de piel más uniforme, lucha contra las manchas e imperfecciones incluso antes de que aparezcan y mantiene una piel suave y lisa. Este innovador exfoliante, de textura ligera, transforma nuestra piel. Lo hace gracias a uno de los beta hidroxiácidos (BHA) más eficaces: el ácido salicílico. Este potente - pero seguro - ácido penetra en el interior de los poros para limpiarlos.</li> 
+                </p>
+                <ul class="especificaciones">
+                    <li>Tipo de piel: Piel grasa</li>
+                    <li>Beneficios: Tratamiento para combatir imperfecciones y puntos negros.</li>
+                    <li>Tamaño: 100 ml</li>
+                    <li>Ingredientes clave: Salix Alba (Willow) Bark Water, Butylene Glycol, Betaine Salicylate, Niacinamide 1,2-Hexanediol, Arginine, Panthenol, Sodium Hyaluronate, Xanthan Gum, Ethyl Hexanediol.</li>
+                </ul>
+                <p class="precio-detalle">$110.000</p>
+                <button class="add-to-cart-btn" data-name="Puntos Negros" data-price="110.000">
+    Añadir al Carrito
+</button>
+
+<script>
+    document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        const product = {
+            name: this.getAttribute('data-name'),
+            price: parseFloat(this.getAttribute('data-price')),
+            quantity: 1
+        };
+        
+        addToCart(product); 
+    });
+</script>

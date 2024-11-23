@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="styles5.css"> 
+</head>
+<body>
+    <div id="product-detail"></div> 
+
+    <script src="lista.js"></script> 
+    <script>
+        
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const productName = getQueryParam("name");
+
+        const product = data.find(item => item.title === productName);
+
+        if (product) {
+            const productDetailContainer = document.getElementById("product-detail");
+            productDetailContainer.innerHTML = `
+                <h1>${product.title}</h1>
+                <img src="${product.images[0]}" alt="${product.title}" />
+                <p>${product.description}</p>
+                <p><strong>Precio:</strong> ${product.price}</p>
+                <p><strong>Disponibilidad:</strong> ${product.availability}</p>
+                <p><strong>Tipo de piel:</strong> ${product.skinType}</p>
+                <button onclick="window.history.back()">Volver a la tienda</button>
+            `;
+        } else {
+            
+            document.getElementById("product-detail").innerHTML = "<p>Producto no encontrado.</p>";
+        }
+    </script>
+    <script src="detallesproducto.js"></script>
+</body>
+</html>
+

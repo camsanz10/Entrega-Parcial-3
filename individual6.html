@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <header>
+        <h1>Detalle del Producto</h1>
+        <a href="index.html" class="volver">← Volver a la tienda</a>
+    </header>
+
+    <main>
+        <section class="detalle-producto">
+            <div class="imagen-producto">
+                <img src="producto6.png" alt="Loción Humectante">
+            </div>
+            <div class="info-producto">
+                <h2>Loción Humectante</h2>
+                <p class="descripcion-detalle">
+                    Esta loción facial está formulada con 70% de savia de abedul (Betula Platyphylla Japonica Juice), un potente ingrediente de acción hidratante y función calmante, capaz de suavizar y tratar la piel sensible, irritada o recién exfoliada. Su fórmula ultra ligera no comedogénica y completamente libre de aceites, ha sido desarrollada para el cuidado e hidratación diaria de las pieles mixtas, grasas o acnéicas.</li> 
+                </p>
+                <ul class="especificaciones">
+                    <li>Tipo de piel: Piel seca</li>
+                    <li>Beneficios: Es capaz de retener hasta 10 veces su peso en moléculas de agua, reduce la sensación de sequedad y fortalece la barrera de la piel.</li>
+                    <li>Tamaño: 100 ml</li>
+                    <li>Ingredientes clave: Betula Platyphylla Japonica Juice, Butylene Glycol, Glycerin, Dimethicone, Betaine, Cetearyl Alcohol,1,2-Hexanediol, Cetearyl Olivate, Sorbitan Olivate. </li>
+                </ul>
+                <p class="precio-detalle">$92.000</p>
+                <button class="add-to-cart-btn" data-name="Loción Humectante" data-price="92.000">
+    Añadir al Carrito
+</button>
+
+<script>
+    document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        const product = {
+            name: this.getAttribute('data-name'),
+            price: parseFloat(this.getAttribute('data-price')),
+            quantity: 1
+        };
+        
+        addToCart(product); 
+    });
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <header>
+        <h1>Detalle del Producto</h1>
+        <a href="index.html" class="volver">← Volver a la tienda</a>
+    </header>
+
+    <main>
+        <section class="detalle-producto">
+            <div class="imagen-producto">
+                <img src="producto5.png" alt="Miracle Toner">
+            </div>
+            <div class="info-producto">
+                <h2>Miracle Toner</h2>
+                <p class="descripcion-detalle">
+                    Quita impurezas, células muertas y escamas de la piel. Exfolia poros tapados y elimina el exceso de sebo. Retiene la humectación en la piel. Árbol de té: es conocido por sus propiedades antisépticas que ayudan a reparar la piel con tendencia a acné y sus cicatrices.</li> 
+                </p>
+                <ul class="especificaciones">
+                    <li>Tipo de piel: Todos los tipos de piel</li>
+                    <li>Beneficios: Revitaliza tu piel y evita la aparición de puntos negros, espinillas y manchas en la piel.</li>
+                    <li>Tamaño: 150 ml</li>
+                    <li>Ingredientes clave: Water, Butylene Glycol, Dipropylene Glycol, Glycerin, Niacinamide, Melaleuca Alternifolia (Tea Tree) Leaf Extract, Polyglyceryl-4 Caprate, Carica Papaya (Papaya) Fruit Extract, Lens Esculenta (Lentil) Seed Extract, Hamamelis Virginiana (Witch Hazel) Extract. </li>
+                </ul>
+                <p class="precio-detalle">$64.000</p>
+                <button class="add-to-cart-btn" data-name="Miracle Toner" data-price="64.000">
+    Añadir al Carrito
+</button>
+
+<script>
+    document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+        const product = {
+            name: this.getAttribute('data-name'),
+            price: parseFloat(this.getAttribute('data-price')),
+            quantity: 1
+        };
+        
+        addToCart(product); 
+    });
+</script>
